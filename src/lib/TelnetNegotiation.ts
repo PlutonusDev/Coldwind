@@ -1,33 +1,34 @@
 import { Socket } from "node:net";
 
 enum IAC {
-	ECHO			= 1,
-	SUPPRESS_GO_AHEAD	= 3,
-	STATUS			= 5,
-	TIMING_MARK		= 6,
-	TERMINAL_TYPE		= 24,
-	WINDOW_SIZE		= 31,
-	TERMINAL_SPEED		= 32,
-	REMOTE_FLOW_CONTROL	= 33,
-	LINEMODE		= 34,
-	ENV_VARS		= 36,
+    ECHO = 1,
+    SUPPRESS_GO_AHEAD = 3,
+    STATUS = 5,
+    TIMING_MARK = 6,
+    TERMINAL_TYPE = 24,
+    WINDOW_SIZE = 31,
+    TERMINAL_SPEED = 32,
+    REMOTE_FLOW_CONTROL = 33,
+    LINEMODE = 34,
+    ENV_VARS = 36,
 
-	SE	= 0xF1,
-	NOP	= 0xF2,
-	DM	= 0xF3,
-	BRK	= 0xF4,
-	IP	= 0xF5,
-	AO	= 0xF6,
-	AYT	= 0xF7,
-	EC	= 0xF8,
-	GA	= 0xF9,
-	SB	= 0xFA,
-	WILL	= 0xFB,
-	WONT	= 0xFC,
-	DO	= 0xFD,
-	DONT	= 0xFE,
-	IAC	= 0xFF
+    SE = 0xF1,
+    NOP = 0xF2,
+    DM = 0xF3,
+    BRK = 0xF4,
+    IP = 0xF5,
+    AO = 0xF6,
+    AYT = 0xF7,
+    EC = 0xF8,
+    GA = 0xF9,
+    SB = 0xFA,
+    WILL = 0xFB,
+    WONT = 0xFC,
+    DO = 0xFD,
+    DONT = 0xFE,
+    IAC = 0xFF
 }
+
 
 function negotiate(buf: Buffer, socket: Socket) {
 	let nbIAC = 0;
