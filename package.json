@@ -1,0 +1,19 @@
+{
+  "name": "coldinwd",
+  "version": "1.0.0",
+  "description": "A portscanner. TBA.",
+  "main": "build/index.js",
+  "repository": "https://github.com/PlutonusDev/Coldwind",
+  "author": "PlutonusDev",
+  "license": "GPL-3.0",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc && yarn start",
+    "start": "node ."
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.42",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.3"
+  }
+}
